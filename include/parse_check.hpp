@@ -9,13 +9,13 @@ class parse_check
 {
     private:
         int degree;
-        std::string reduce;
-        std::map<int,std::string> components;
+        std::string *reduce;
+        std::map<int,std::string*> components;
     public:
         parse_check();
         ~parse_check();
 
-        void start(std::string equation);
+        void start(char **equation);
         void result() const;
 
         int get_degree() const;
